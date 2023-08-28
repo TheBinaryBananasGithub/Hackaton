@@ -1,0 +1,33 @@
+name: TheBinaryBananas
+
+version: 0.0.1
+
+model-paths:
+  - models
+
+test-paths:
+  - test
+
+analysis-paths:
+  - analysis
+
+macro-paths:
+  - macros
+
+snapshot-paths:
+  - snapshots
+
+asset-paths:
+  - assets
+
+target-path: target
+log-path: logs
+
+clean-targets:
+  - target
+  - dbt_modules
+
+
+models:
+    enabled: true        # configs defined here are applied to _all_ packages
+    materialized: view   # but can be overridden in more specific configs below
