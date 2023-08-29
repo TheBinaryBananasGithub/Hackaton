@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: average_credit_by_gender
+    columns:
+      - name: gender
+        tests:
+          - accepted_values:
+              values: ['Male', 'Female']
+
+  - name: average_credit_by_age
+    columns:
+      - name: age
+        tests:
+          - unique
+          - not_null
+
+  - name: average_credit_by_geography
+    columns:
+      - name: geography
+        tests:
+          - unique
+          - not_null
